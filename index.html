@@ -11,7 +11,25 @@
     <link rel="stylesheet" href="main.css">
   </head>
   <body>
-    <h1>Hello, world!</h1>
+
+    <h1>Let's translate the following into a language you understand</h1>
+
+    <p id="quote"><br>God has infinite children,<br>
+    But the name of His fondest child<br>
+    Is Peace.<br><br>
+    – Sri Chinmoy
+    </p>
+
+    <button onclick="getElementById('quote')=myFunction('spanish')">Espanol</button>
+
+    <script>
+    function myFunction(language) {
+        if(language == spanish){
+	    var str = "Dios tiene hijos infinitos,<br>Pero el nombre de su hijo más querido<br>Es la Paz.<br><br>– Sri Chinmoy"; 
+	        document.getElementById("quote").innerHTML = str;
+	    }
+    }
+    </script>
 
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
