@@ -2,6 +2,9 @@
 <html lang="en">
   <head>
     <!-- Required meta tags -->
+    <title>
+        HTML/CSS/JS Creative Project
+    </title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
@@ -11,25 +14,45 @@
     <link rel="stylesheet" href="main.css">
   </head>
   <body>
-
     <h1>Let's translate the following into a language you understand</h1>
 
-    <p id="quote"><br>God has infinite children,<br>
-    But the name of His fondest child<br>
-    Is Peace.<br><br>
-    – Sri Chinmoy
-    </p>
+<blockquote id="quote"><br>God has infinite children,<br>But the name of His fondest child<br>Is Peace.<br><br>– Sri Chinmoy"
+</blockquote>
+</p>
+<div id="language-selctor"> 
+    <label> Select a language </label>
+    <br>
+    <button type="button" class="btn btn-default" onclick="myFunction(2)">English</button>
+    <button type="button" class="btn btn-default" onclick="myFunction(3)">Espanol</button>
+    <button type="button" class="btn btn-default" onclick="myFunction(4)">Tagalog</button>
+    <button type="button" class="btn btn-default" onclick="myFunction(5)">한국어</button>
+</div>
+<img id="flag" src="img/us.png" border="0" alt="Image of National Flag" >
 
-    <button onclick="getElementById('quote')=myFunction('spanish')">Espanol</button>
-
-    <script>
-    function myFunction(language) {
-        if(language == spanish){
-	    var str = "Dios tiene hijos infinitos,<br>Pero el nombre de su hijo más querido<br>Es la Paz.<br><br>– Sri Chinmoy"; 
-	        document.getElementById("quote").innerHTML = str;
-	    }
+<script>
+function myFunction(language) {
+    if(language == 2){
+    var str = "<br>God has infinite children,<br>But the name of His fondest child<br>Is Peace.<br><br>– Sri Chinmoy";
+    document.getElementById('flag').src='img/us.png'
+    document.getElementById('quote').innerHTML = str;
     }
-    </script>
+    else if(language == 3){
+    var str = "<br>Dios tiene hijos infinitos,<br>Pero el nombre de su hijo más querido<br>Es la Paz.<br><br>– Sri Chinmoy";
+    document.getElementById('flag').src='img/es.png'
+    document.getElementById('quote').innerHTML = str;
+    }
+    else if(language == 4){
+    var str = "<br>Ang Diyos ay may mga walang hanggang anak,<br>Ngunit ang pangalan ng Kanyang pinakamapalad na anak<br>Ang Kapayapaan.<br><br>– Sri Chinmoy";
+    document.getElementById('flag').src='img/ph.png'
+    document.getElementById('quote').innerHTML = str;
+    }
+    else{
+    var str = "<br>하나님은 무한한 자녀들을 가지고 계시 며,<br>그러나 그의 가장 어린 아이의 이름<br>평화인가?<br><br>– Sri Chinmoy";
+    document.getElementById('flag').src='img/kr.png'
+    document.getElementById('quote').innerHTML = str;
+    }
+}
+</script>
 
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
